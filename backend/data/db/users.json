@@ -1,0 +1,13 @@
+[{
+  "_id": {
+    "$oid": "634c450b6297eeac415e7a7c"
+  },
+  "fullName": "admin user",
+  "userName": "admin",
+  "email": "admin@admin.com",
+  "password": "U2FsdGVkX18Kz9qh9xy+L/Vz11aqHNj8KItHQ2jnqdc=",
+  "address": "admin address",
+  "phoneNo": "123456789",
+  "userLevel": "1",
+  "__v": 0
+}]
