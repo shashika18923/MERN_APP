@@ -14,10 +14,10 @@ In the project directory, you can run:
 3. React Use-Form
 
 ## How to run
-1.Open project folder 
-2.Open new terminal
-3.Run Command npm start
-4.Open another new terminal
+1. Open project folder 
+2. Open new terminal
+3. Run Command npm start
+4. Open another new terminal
   4.1 type cd backend
   4.2 type nodemon server
 5. Enjoy it 
