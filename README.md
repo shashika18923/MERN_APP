@@ -13,7 +13,7 @@ In the project directory, you can run:
 2. React redux-thunk 
 3. React Use-Form
 
-#How to run
+##How to run
 1.Open project folder 
 2.Open new terminal
 3.Run Command npm start
