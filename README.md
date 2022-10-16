@@ -21,3 +21,9 @@ In the project directory, you can run:
 5. type cd backend
 6. type nodemon server
 7. Enjoy it 
+
+## Database
+1. Create mongo db with naming mern-db
+2. import users.json from backend/data/db
+3. use username :- admin pasword :- admin to login as admin
+4. if you want to create normal user account you can create it using signup page
