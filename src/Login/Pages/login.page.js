@@ -3,7 +3,7 @@ import { Button, Form, Input } from 'antd';
 import { UserModel } from "../../Login/Models/user.model";
 import axios from "axios";
 import { useDispatch } from "react-redux";
-import { ADMIN_USER_LEVEL, END_POINT, USER_ACTIONS } from "../../MainComponents/redux/actions";
+import { ADMIN_USER_LEVEL, END_POINT, LOCAL_ENDPOINT, USER_ACTIONS } from "../../MainComponents/redux/actions";
 import { toast, ToastContainer } from "react-toastify";
 
 
@@ -24,7 +24,7 @@ export const LoginPage = () => {
         axios.post(END_POINT+'user/byUsername/'+userDetails.userName,userDetails).then(res => {
             localStorage.setItem("userId", btoa(res.data._id)); 
             dispatch({ type: USER_ACTIONS.SET_USER, payload:res.data }); 
-            (res.data.userLevel === ADMIN_USER_LEVEL) ?  window.open('http://localhost:3000/home/admin', '_self').focus() :  window.open('http://localhost:3000/home', '_self').focus();
+            (res.data.userLevel === ADMIN_USER_LEVEL) ?  window.open(LOCAL_ENDPOINT+'home/admin', '_self').focus() :  window.open(LOCAL_ENDPOINT+'home', '_self').focus();
             console.log(res.status);
             
     }).catch((err) => toast.error('Username or password incorrect !', { position: toast.POSITION.TOP_RIGHT }));
