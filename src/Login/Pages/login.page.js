@@ -25,7 +25,6 @@ export const LoginPage = () => {
             localStorage.setItem("userId", btoa(res.data._id)); 
             dispatch({ type: USER_ACTIONS.SET_USER, payload:res.data }); 
             (res.data.userLevel === ADMIN_USER_LEVEL) ?  window.open(LOCAL_ENDPOINT+'home/admin', '_self').focus() :  window.open(LOCAL_ENDPOINT+'home', '_self').focus();
-            console.log(res.status);
             
     }).catch((err) => toast.error('Username or password incorrect !', { position: toast.POSITION.TOP_RIGHT }));
     };

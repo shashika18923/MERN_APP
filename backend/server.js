@@ -48,9 +48,7 @@ todoRoutes.route('/:id').get(function(req, res) {
 todoRoutes.route('/byUsername/:userName').post(function(req, res) {
     let userName = req.params.userName;
     userModel.findOne({userName: userName}, function(err, user) {
-        console.log(user);
         if(!user){
-            console.log('hit');
             res.status(400).send("Error ...!")
         }
         else{

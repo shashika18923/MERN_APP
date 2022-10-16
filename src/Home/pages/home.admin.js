@@ -20,7 +20,6 @@ export const AdminHomePage = () => {
     }, []);
 
     useEffect(() => {
-        console.log(localStorage.getItem('userId'));
         user && (((user.userLevel !== ADMIN_USER_LEVEL) ) && window.location.replace('/unAuthorized'));
         (localStorage.getItem('userId') === null) && window.location.replace('/unAuthorized');
     }, [user]);
