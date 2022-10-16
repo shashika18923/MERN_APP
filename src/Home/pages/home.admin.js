@@ -6,7 +6,8 @@ import { Fragment, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toast, ToastContainer } from "react-toastify";
 import { Navigation } from "../../MainComponents/navigation";
-import { ADMIN_USER_LEVEL, END_POINT, USER_ACTIONS } from "../../MainComponents/redux/actions";
+import { ADMIN_USER_LEVEL, END_POINT, LOCAL_ENDPOINT, USER_ACTIONS } from "../../MainComponents/redux/actions";
+import { EditOutlined } from "@ant-design/icons"
 
 
 export const AdminHomePage = () => {
@@ -25,7 +26,7 @@ export const AdminHomePage = () => {
     }, [user]);
 
     const rowClicked = (value) => {
-        window.open('http://localhost:3000/home/'+ value, '_blank').focus();
+        window.open(LOCAL_ENDPOINT+'home/'+ value, '_blank').focus();
     }
     const Logout = () => {
         dispatch({ type: USER_ACTIONS.LOGOUT_USER, payload:user });
@@ -46,7 +47,7 @@ export const AdminHomePage = () => {
                         <Column title="Address" dataIndex="address" key="fullName" />
                         <Column title="Email" dataIndex="email" key="fullName" />
                         <Column title="Phone" dataIndex="phoneNo" key="fullName" />
-                        <Column title="Action" key="action" render={(_, record) => (<Space size="middle"><span onClick={() => rowClicked(record._id)}>Edit</span></Space>)} />
+                        <Column title="Action" key="action" render={(_, record) => (<Space size="middle"><span onClick={() => rowClicked(record._id)}><EditOutlined /> Edit</span></Space>)} />
                     </Table>}
                 </div>
             </div>
