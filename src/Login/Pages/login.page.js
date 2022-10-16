@@ -5,7 +5,7 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { ADMIN_USER_LEVEL, END_POINT, LOCAL_ENDPOINT, USER_ACTIONS } from "../../MainComponents/redux/actions";
 import { toast, ToastContainer } from "react-toastify";
-
+import { Link } from "react-router-dom";
 
 export const LoginPage = () => {
 
@@ -44,8 +44,9 @@ export const LoginPage = () => {
                         </Form.Item>
                         <Form.Item>
                             <Button type="primary" htmlType="submit">
-                                Submit
+                                Login
                             </Button>
+                            <Link to="/signup" className="center-href">Signup</Link>
                         </Form.Item>
                     </Form>
                 </div>

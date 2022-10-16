@@ -9,7 +9,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { SECURITY_KEY } from "../../MainComponents/redux/actions";
-
+import { Link } from "react-router-dom";
 
 export const SignupPage = () => {
 
@@ -86,6 +86,11 @@ export const SignupPage = () => {
                                 <Form.Item label="Password" >
                                     <input type="text" className="text-field" {...register("password", { required: "Required", onChange: (e) => onChanges({ password: AES.encrypt(e.target.value, SECURITY_KEY).toString() }) })} />
                                     {errors.password && <p className="error">{errors.password.message}</p>}
+                                </Form.Item>
+                            </div>
+                            <div>
+                                <Form.Item >
+                                    <Link to="/" className="center-href-sign">To Login</Link>
                                 </Form.Item>
                             </div>
                             </Form>
