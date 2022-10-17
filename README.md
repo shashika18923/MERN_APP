@@ -22,7 +22,7 @@ In the project directory, you can run:
 6. type nodemon server
 7. Enjoy it 
 
-## Database
+## Using Database
 1. Create mongo db with naming mern-db
 2. import users.json from backend/data/db
 3. use username :- admin pasword :- admin to login as admin
