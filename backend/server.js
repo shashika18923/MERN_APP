@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 let userModel = require('./user.model');
 const SECURITY_KEY = "This sis the very secured key for encrypt password";
 
-mongoose.connect('mongodb://127.0.0.1:27017/mern-bd', { useNewUrlParser: true });
+mongoose.connect('mongodb+srv://shashika18923:ss18923@cluster0.8v7oeqg.mongodb.net/mern-db?retryWrites=true&w=majority', { useNewUrlParser: true });
 const connection = mongoose.connection;
 
 connection.once('open', function() {
